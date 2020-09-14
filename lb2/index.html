@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lb2</title>
+    <style>
+form{
+    width: 40%;
+    margin: 30px;
+}
+
+*{
+    margin: 10px;
+}
+
+.email:valid{
+    color: rgb(112, 9, 247);
+}
+
+.email:invalid{
+color: rgb(255, 0, 0);
+}
+
+.tel:valid{
+    color: rgb(247, 9, 176);
+}
+
+.tel:invalid{
+color: rgb(255, 0, 0);
+}
+
+input[type=text]:enabled {
+  background: rgb(0, 183, 255);
+}
+
+input[type=text]:disabled {
+  background: #1303f7;
+}
+
+input:required {
+    border: 1px solid red; 
+}
+
+input:optional{
+    border: 5px solid green;   
+}
+
+input:checked + span{
+color: rgb(227, 188, 255);
+}
+
+input:indeterminate + span{
+color: rgb(133, 55, 189);
+}
+
+input:indeterminate + span::after{
+    content: "*";
+color: red;
+font-weight: bold;   
+}
+    </style>
+</head>
+<body>
+    <form>
+
+        <fieldset >
+            <label for="userName">Name:</label>
+            <input type="text" id="userName" required>
+        </fieldset>
+        <fieldset>
+            <label for="userSurname">Surname:</label>
+            <input type="text" id="userSurname" disabled>
+        </fieldset>
+      
+        <fieldset class="email">
+            <label for="email">Email:</label>
+            <input type=email id="email">
+        </fieldset>
+
+        <fieldset class="tel">
+            <label for="tel">Phone number:</label>
+            <input type=tel id="tel" placeholder="098-765-43-21" pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}">
+        </fieldset>
+
+        <fieldset>
+            <p>Select your gender:</p>
+  <input type="radio" id="male" name="gender" value="male">
+  <span>Male</span><br>
+  <input type="radio" id="female" name="gender" value="female">
+  <span>Female</span><br>
+        </fieldset>
+
+      
+      
+        <fieldset><button>Submit</button></fieldset>
+      </form> 
+</body>
+</html>
