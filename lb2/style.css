@@ -1,0 +1,61 @@
+:root{
+    --red-color: red;
+    }
+#name{
+    position: relative;
+bottom: 20px;
+}
+
+button{
+    position: absolute;
+    top: 500px;   
+    left: 920px; 
+}
+
+#email:valid{
+    color: #7B68EE;
+}
+
+#email:invalid{
+color: var(--red-color);
+}
+
+.tel:valid{
+    color: #CD5C5C;
+}
+
+
+.tel:invalid{
+    color: var(--red-color, red);
+}
+
+input[type=text]:enabled {
+    background: #B0E0E6;
+}
+  
+input[type=text]:disabled {
+    background: #1E90FF;
+}
+  
+input:required {
+      border: 4px solid #800080;
+      border-radius: 8px; 
+}
+  
+input:optional{
+      border: 2px solid #DA70D6;   
+}
+  
+input:checked + span{
+  color: rgb(227, 188, 255);
+}
+  
+input:indeterminate + span{
+  color: rgb(133, 55, 189);
+}
+  
+input:indeterminate + span::after{
+      content: "*";
+      color: var(--red-color);
+  font-weight: bold;   
+}
